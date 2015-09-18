@@ -1,5 +1,5 @@
 {
-  "name": "hubot-hubot-task-runner",
+  "name": "hubot-task-runner",
   "description": "A hubot script for running distributed tasks",
   "version": "0.0.0",
   "author": "Israel Shirk <israelshirk@gmail.com>",
@@ -9,18 +9,20 @@
 
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-hubot-task-runner.git"
+    "url": "git://github.com/israelshirk/hubot-task-runner.git"
   },
 
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-hubot-task-runner/issues"
+    "url": "https://github.com/israelshirk/hubot-task-runner/issues"
   },
 
   "dependencies": {
+    "js-task-runner": "https://github.com/israelshirk/js-task-runner.git#master"
   },
 
   "peerDependencies": {
-    "hubot": "2.x"
+    "hubot": "2.x",
+    "lodash": "3.*"
   },
 
   "devDependencies": {
@@ -33,14 +35,12 @@
     "grunt-release": "~0.11.0",
     "hubot": "2.x",
     "matchdep": "~0.3.0",
-    "mocha": "^2.1.0",
-    "sinon": "^1.13.0",
-    "sinon-chai": "^2.7.0"
+    "jasmine-node": "mhevery/jasmine-node#Jasmine2.0"
   },
 
   "main": "index.coffee",
 
   "scripts": {
-    "test": "grunt test"
+    "test": "node_modules/jasmine-node/bin/jasmine-node --coffee spec"
   }
 }
